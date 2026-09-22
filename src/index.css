@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary-yellow: #f4c550;
+  --primary-yellow-light: #fbe9ba;
+  --theme-green: #9fbaae;
+  --theme-green-light: #cbded3;
+  --theme-blue: #9fb7ce;
+  --theme-blue-light: #bfd6ea;
+  --theme-pink: #e0a39a;
+  --theme-pink-light: #f2c0bd;
+  --theme-orange: #f0aa8d;
+  --theme-orange-light: #f4c8ba;
+
+  --color-black: #121417;
+  --color-gray: #8a8a89;
+  --color-light-gray: #f8f8f8;
+  --color-border: rgba(18, 20, 23, 0.1);
+  --color-white: #ffffff;
+  --color-green-dot: #38cd3e;
+
+  --font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-black);
+  background-color: var(--color-light-gray);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0 16px;
+}

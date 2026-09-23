@@ -1,0 +1,77 @@
+.header { 
+    width: 100%;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1184px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.logoText {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.link {
+    font-size: 16px;
+    color: #121417;
+    transition: color 0.2s ease;
+}
+
+.active {
+    color: #F4C550;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logInBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.logInBtn:hover {
+    color: #F4C550;
+}
+
+.registerBtn {
+    width: 166px;
+    height: 48px;
+    background-color: #121417;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.registerBtn:hover {
+    background-color: #F4C550;
+    color: #121417;
+}

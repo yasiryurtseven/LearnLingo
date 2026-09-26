@@ -1,0 +1,276 @@
+.card {
+  position: relative;
+  display: flex;
+  gap: 48px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  border-radius: 50%;
+  border: 3px solid #fbe9ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.onlineBadge {
+  position: absolute;
+  top: 19px;
+  right: 23px;
+  width: 12px;
+  height: 12px;
+  background-color: #38cd3e;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #8a8a89;
+}
+
+.name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  color: #121417;
+}
+
+.metaInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #121417;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.divider {
+  color: rgba(18, 20, 23, 0.2);
+}
+
+.starIcon {
+  color: #ffc531;
+}
+
+.price {
+  color: #38cd3e;
+}
+
+.heartBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heartIcon {
+  stroke: #121417;
+  fill: none;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #121417;
+}
+
+.detailLabel {
+  color: #8a8a89;
+}
+
+.underlinedSpeaks {
+  text-decoration: underline;
+}
+
+.readMoreBtn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: underline;
+  color: #121417;
+  cursor: pointer;
+}
+
+.readMoreBtn:hover {
+  color: #f4c550;
+}
+
+.expandedContent {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.experienceText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #121417;
+}
+
+.reviewsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.reviewItem {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviewerHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewerAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fbe9ba;
+  color: #f4c550;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.reviewerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reviewerName {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8a8a89;
+}
+
+.reviewerRating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #121417;
+}
+
+.reviewComment {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.43;
+  color: #121417;
+}
+
+.levelList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.levelBadge {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  border-radius: 35px;
+  border: 1px solid rgba(18, 20, 23, 0.2);
+  background-color: transparent;
+  color: #121417;
+}
+
+.activeBadge {
+  background-color: #f4c550;
+  border-color: #f4c550;
+}
+
+.bookBtn {
+  margin-top: 32px;
+  align-self: flex-start;
+  padding: 16px 48px;
+  background-color: #f4c550;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.56;
+  color: #121417;
+  cursor: pointer;
+}
+
+.bookBtn:hover {
+  background-color: #ffdc86;
+}

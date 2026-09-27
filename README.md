@@ -6,8 +6,8 @@ LearnLingo, kullanıcıların dünya çapındaki profesyonel dil eğitmenlerini 
 
 ## 🚀 Canlı Demo & Dağıtım
 
-- **Canlı Site:** [LearnLingo Live Demo](BURAYA_VERCEL_VEYA_NETLIFY_LINKINI_YAZ)
-- **Figma Tasarımı:** [LearnLingo Figma Maketi](BURAYA_FIGMA_LINKINI_YAZ)
+- **Canlı Site:** [LearnLingo Live Demo](https://learn-lingo-xi-lyart.vercel.app/)
+- **Figma Tasarımı:** [LearnLingo Figma Maketi](https://www.figma.com/design/dewf5jVviSTuWMMyU3d8Mc/Learn-Lingo?node-id=44-540&t=1WVclQKSHYYZyAPW-0)
 
 ---
 

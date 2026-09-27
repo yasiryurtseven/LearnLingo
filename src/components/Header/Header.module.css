@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative; 
 }
 
 .logo {
@@ -27,6 +28,9 @@
 .nav {
     display: flex;
     gap: 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .link {
@@ -74,4 +78,33 @@
 .registerBtn:hover {
     background-color: #F4C550;
     color: #121417;
+}
+
+.userWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.userName {
+    font-weight: 600;
+    font-size: 16px;
+    color: #121417;
+}
+
+.logOutBtn {
+    padding: 10px 20px;
+    border: 1px solid #121417;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #121417;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.logOutBtn:hover {
+    background-color: #121417;
+    color: #fff;
 }

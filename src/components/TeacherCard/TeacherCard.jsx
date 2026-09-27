@@ -1,8 +1,17 @@
 import { useState } from "react";
+import BookTrialModal from "../BookTrialModal/BookTrialModal";
+import { useFavorites } from "../../Context/useFavorites";
 import css from "./TeacherCard.module.css";
+
+// SVG imports
+import bookOpenIcon from "../../assets/book-open.svg";
+import starIcon from "../../assets/star.svg";
+import heartIcon from "../../assets/heart.svg";
+import fullHeartIcon from "../../assets/full-heart.svg";
 
 export default function TeacherCard({ teacher }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const {
     name,
@@ -18,6 +27,10 @@ export default function TeacherCard({ teacher }) {
     conditions,
     experience,
   } = teacher;
+
+  const { isFavorite, toggleFavorite } = useFavorites();
+const teacherId = teacher.id || `${teacher.name}_${teacher.surname}`;
+const isFav = isFavorite(teacherId);
 
   return (
     <li className={css.card}>
@@ -41,6 +54,7 @@ export default function TeacherCard({ teacher }) {
 
           <div className={css.metaInfo}>
             <div className={css.metaItem}>
+              <img src={bookOpenIcon} alt="Lessons online" width="16" height="16" />
               <span>Lessons online</span>
             </div>
             <span className={css.divider}>|</span>
@@ -51,7 +65,7 @@ export default function TeacherCard({ teacher }) {
             <span className={css.divider}>|</span>
 
             <div className={css.metaItem}>
-              <span className={css.starIcon}>★</span>
+              <img src={starIcon} alt="Rating star" width="16" height="16" />
               <span>Rating: {rating}</span>
             </div>
             <span className={css.divider}>|</span>
@@ -61,10 +75,18 @@ export default function TeacherCard({ teacher }) {
               <span className={css.price}>{price_per_hour}$</span>
             </div>
 
-            <button type="button" className={css.heartBtn} aria-label="Add to favorites">
-              <svg className={css.heartIcon} width="26" height="26">
-                <use href="/icons.svg#icon-heart" />
-              </svg>
+            <button
+              type="button"
+              className={css.heartBtn}
+              onClick={() => toggleFavorite(teacher)}
+              aria-label="Add to favorites"
+            >
+              <img
+                src={isFav ? fullHeartIcon : heartIcon}
+                alt="Favorite"
+                width="26"
+                height="26"
+              />
             </button>
           </div>
         </div>
@@ -82,7 +104,6 @@ export default function TeacherCard({ teacher }) {
           </li>
         </ul>
 
-        {/* Read more butonu sadece kapalıyken görünür */}
         {!isExpanded && (
           <button
             type="button"
@@ -93,7 +114,6 @@ export default function TeacherCard({ teacher }) {
           </button>
         )}
 
-        {/* Read more'a basılınca açılan genişletilmiş alan */}
         {isExpanded && (
           <div className={css.expandedContent}>
             <p className={css.experienceText}>{experience}</p>
@@ -108,7 +128,7 @@ export default function TeacherCard({ teacher }) {
                     <div className={css.reviewerMeta}>
                       <span className={css.reviewerName}>{review.reviewer_name}</span>
                       <div className={css.reviewerRating}>
-                        <span className={css.starIcon}>★</span>
+                        <img src={starIcon} alt="Review star" width="16" height="16" />
                         <span>{Number(review.reviewer_rating).toFixed(1)}</span>
                       </div>
                     </div>
@@ -131,13 +151,21 @@ export default function TeacherCard({ teacher }) {
           ))}
         </ul>
 
-        {/* Açık olduğunda deneme dersi butonu görünür */}
         {isExpanded && (
-          <button type="button" className={css.bookBtn}>
+          <button 
+          type="button" 
+          className={css.bookBtn}
+          onClick={() => setIsModalOpen(true)}>
             Book trial lesson
           </button>
         )}
       </div>
+      {isModalOpen && (
+          <BookTrialModal
+            teacher={teacher}
+            onClose={() => setIsModalOpen(false)}
+          />
+        )}
     </li>
   );
 }

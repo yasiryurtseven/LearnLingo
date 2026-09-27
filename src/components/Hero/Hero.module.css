@@ -74,12 +74,12 @@
 .statItem {
     display: flex;
     align-items: center;
-    gap: 16px; /* Sayı ile yazı arasındaki mesafe */
+    gap: 16px; 
 }
 
 .statNumber {
     font-size: 28px;
-    font-weight: 500; /* Figma font kalınlığı */
+    font-weight: 500; 
     color: #121417;
 }
 

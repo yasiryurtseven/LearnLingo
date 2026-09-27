@@ -1,16 +1,82 @@
-# React + Vite
+# 🌍 LearnLingo — Online Language Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LearnLingo, kullanıcıların dünya çapındaki profesyonel dil eğitmenlerini inceleyebileceği, ihtiyaçlarına göre filtreleyebileceği ve deneme dersi randevusu alabileceği modern bir çevrim içi dil öğrenim platformudur.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Canlı Demo & Dağıtım
 
-## React Compiler
+- **Canlı Site:** [LearnLingo Live Demo](BURAYA_VERCEL_VEYA_NETLIFY_LINKINI_YAZ)
+- **Figma Tasarımı:** [LearnLingo Figma Maketi](BURAYA_FIGMA_LINKINI_YAZ)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Kullanılan Teknolojiler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Kütüphanesi:** React 18+
+- **Geliştirme Ortamı & Bundler:** Vite
+- **Yönlendirme (Routing):** React Router DOM v6
+- **Stil Yönetimi:** CSS Modules
+- **Yetkilendirme & Veritabanı:** Firebase Authentication & Firebase Realtime Database
+- **Form & Validasyon Yönetimi:** React Hook Form & Yup
+- **Bildirimler:** React Hot Toast
+- **İkonlar:** React Icons
+
+---
+
+## 📋 Teknik Özellikler ve İşlevler
+
+### 1. Kimlik Doğrulama (Firebase Auth)
+- Kullanıcı kaydı (Registration) ve girişi (Log In).
+- Güçlü form doğrulamaları (zorunlu alanlar, geçerli e-posta, minimum şifre uzunluğu).
+- Escape tuşu, backdrop tıklaması ve kapatma butonuyla kapanabilen modallar.
+- Oturum durumunun dinlenmesi, dinamik Header ve oturum kapatıldığında güvenli yönlendirme.
+
+### 2. Öğretmenler & Sayfalama (Teachers Page & Load More)
+- Firebase Realtime Database üzerinden dinamik olarak çekilen öğretmen koleksiyonu.
+- Başlangıçta 4 öğretmen kartı gösterimi ve **"Load more"** butonuyla sonraki kartların yüklenmesi.
+- **Read more** seçeneği ile öğretmenin detaylı deneyimi ve öğrenci değerlendirmelerine erişim.
+
+### 3. Favori Yönetimi & Korumalı Rota (Favorites & PrivateRoute)
+- Giriş yapmış kullanıcılar için Firebase üzerinde kullanıcıya özel `favorites` senkronizasyonu.
+- Sayfa yenilendiğinde korunan favori durumları ve anlık güncellenen kalp butonları.
+- Yetkisiz kullanıcılar için bilgilendirme bildirimleri.
+- Oturum açmamış kullanıcıların `/favorites` sayfasına doğrudan erişimini engelleyen **PrivateRoute** mimarisi.
+
+### 4. Filtreleme Sistemi (Yıldızlı Görev ⭐)
+- Öğretim dili (Languages), bilgi seviyesi (Level of knowledge) ve saatlik ücret (Price) bazında anlık filtreleme.
+- Filtreleme yapıldığında otomatik sıfırlanan ve listeyi yeniden düzenleyen yapı.
+- Filtreleri tek tıkla temizleme olanağı sağlayan sıfırlama butonu.
+
+### 5. Deneme Dersi Rezervasyonu (Book Trial Lesson Modal)
+- Seçilen öğretmen bilgileriyle açılan rezervasyon formu.
+- Öğrenme amacını seçmeye yarayan dinamik radio buton grubu.
+- Validasyonlu isim, e-posta ve telefon numarası alanları.
+
+---
+
+## 💻 Kurulum ve Yerel Geliştirme
+
+Projeyi yerel makinenizde çalıştırmak için:
+
+```bash
+# 1. Depoyu klonlayın
+git clone [https://github.com/KULLANICI_ADIN/LearnLingo.git](https://github.com/KULLANICI_ADIN/LearnLingo.git)
+
+# 2. Proje dizinine gidin
+cd LearnLingo
+
+# 3. Bağımlılıkları yükleyin
+npm install
+
+# 4. Geliştirici sunucusunu başlatın
+npm run dev
+
+src/
+├── assets/          # Statik görseller ve ikonlar
+├── components/      # Yeniden kullanılabilir bileşenler (Header, TeacherCard, Filters, Modals...)
+├── Context/         # AuthContext ve FavoritesContext sağlayıcıları ve hook'ları
+├── firebase/        # Firebase konfigürasyon dosyaları
+├── pages/           # HomePage, TeachersPage, FavoritesPage
+├── App.jsx          # Rota tanımları ve ana uygulama iskeleti
+└── main.jsx         # Context sağlayıcıları ve DOM render girişi

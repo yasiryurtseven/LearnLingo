@@ -43,7 +43,7 @@ LearnLingo, kullanıcıların dünya çapındaki profesyonel dil eğitmenlerini 
 - Yetkisiz kullanıcılar için bilgilendirme bildirimleri.
 - Oturum açmamış kullanıcıların `/favorites` sayfasına doğrudan erişimini engelleyen **PrivateRoute** mimarisi.
 
-### 4. Filtreleme Sistemi (Yıldızlı Görev ⭐)
+### 4. Filtreleme Sistemi 
 - Öğretim dili (Languages), bilgi seviyesi (Level of knowledge) ve saatlik ücret (Price) bazında anlık filtreleme.
 - Filtreleme yapıldığında otomatik sıfırlanan ve listeyi yeniden düzenleyen yapı.
 - Filtreleri tek tıkla temizleme olanağı sağlayan sıfırlama butonu.
@@ -61,7 +61,7 @@ Projeyi yerel makinenizde çalıştırmak için:
 
 ```bash
 # 1. Depoyu klonlayın
-git clone [https://github.com/KULLANICI_ADIN/LearnLingo.git](https://github.com/KULLANICI_ADIN/LearnLingo.git)
+git clone https://github.com/yasiryurtseven/LearnLingo.git
 
 # 2. Proje dizinine gidin
 cd LearnLingo
